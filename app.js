@@ -34,9 +34,9 @@ function encrypt(data) {
 
 function decrypt(data) {
     const encrypted = AES.decrypt(data ? data : '', KEY, {
-            iv: IV,
-            mode: _mode.CBC,
-            padding: pad.Pkcs7
-        });
+        iv: IV,
+        mode: _mode.CBC,
+        padding: pad.Pkcs7
+    });
     return encrypted.toString(enc.Utf8);
 }
